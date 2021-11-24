@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
@@ -13,33 +14,34 @@
   </div>
 
   <script type="module">
-    import FiltersList from './index.js';
+    import FiltersList from "./index.js";
 
     const list = [
       {
-        value: 'cell_phones',
-        title: 'Cell phones',
+        value: "cell_phones",
+        title: "Cell phones",
       },
       {
-        value: 'computers',
+        value: "computers",
         checked: true,
-        title: 'Computers & Tables',
+        title: "Computers & Tables",
       }
     ];
 
     const filtersList = new FiltersList({
-      title: 'Category',
+      title: "Category",
       list
     });
 
     root.append(filtersList.element);
 
-    reset.addEventListener('pointerdown', () => {
+    reset.addEventListener("pointerdown", () => {
       filtersList.reset();
     });
 
-    filtersList.element.addEventListener('change', event => {
-      console.error('event', event.target.value);
+    filtersList.element.addEventListener("change", (event) => {
+      console.log(filtersList.element);
+      console.error("event", event.target.value);
     });
   </script>
 </body>

@@ -1,6 +1,6 @@
-import Pagination from './solution';
+import Pagination from "./index.js";
 
-describe('Pagination', () => {
+describe("Pagination", () => {
   let pagination;
 
   beforeEach(() => {
@@ -17,12 +17,12 @@ describe('Pagination', () => {
     pagination = null;
   });
 
-  it('should be rendered correctly', () => {
+  it("should be rendered correctly", () => {
     expect(pagination.element).toBeInTheDocument();
     expect(pagination.element).toBeVisible();
   });
 
-  it('should have ability to be destroyed', () => {
+  it("should have ability to be destroyed", () => {
     pagination.destroy();
 
     expect(pagination.element).not.toBeInTheDocument();
